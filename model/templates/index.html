@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+</head>
+<h1>Welcome to bikeshare data protal</h1>
+<body  style="font-size:16px; font-family:arial;">
+
+    <form action="/stat_details" method="post">
+        <select name=city method="GET" action="/">
+        {% for city in city %}
+        <option value="{{city}}" SELECTED>{{city}}</option>
+        "
+        {% endfor %}
+    </select>
+
+    <select name=month method="GET" action="/">
+        {% for month in month %}
+        <option value="{{month}}" SELECTED>{{month}}</option>
+        "
+        {% endfor %}
+    </select>
+
+    <select name=day method="GET" action="/">
+        {% for day in day %}
+        <option value="{{day}}" SELECTED>{{day}}</option>
+        "
+        {% endfor %}
+    </select>
+
+        <input type="submit" name= "form" value="Submit" />
+    </form>
+
+</body>
+</html>
